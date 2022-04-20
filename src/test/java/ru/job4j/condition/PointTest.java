@@ -30,7 +30,7 @@ public class PointTest {
     }
 
     @Test
-    public void when82to59Then761() {
+    public void when82to59Then7dot61() {
         int x1 = 8;
         int y1 = 2;
         int x2 = 5;
