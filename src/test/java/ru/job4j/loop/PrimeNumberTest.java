@@ -20,6 +20,7 @@ public class PrimeNumberTest {
         int result = PrimeNumber.calc(finish);
         int expected = 6;
         Assert.assertEquals(expected, result);
+
     }
 
     @Test
