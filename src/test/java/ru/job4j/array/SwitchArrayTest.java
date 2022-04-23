@@ -27,7 +27,7 @@ public class SwitchArrayTest {
     }
 
     @Test
-    public void whenSwap99To23Than23423991284() {
+    public void whenSwap2To3Than23423991284() {
         int[] input = {2, 34, 99, 23, 12, 84};
         int source = 2;
         int dest = 3;
