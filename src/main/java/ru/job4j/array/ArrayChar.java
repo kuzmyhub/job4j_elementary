@@ -6,9 +6,7 @@ public class ArrayChar {
         boolean result = true;
         int arrayLength = Math.min(word.length, pref.length);
         for (int i = 0; i < arrayLength; i++) {
-            String wordString = Character.toString(word[i]);
-            String prefString = Character.toString(pref[i]);
-            if (!wordString.startsWith(prefString)) {
+            if (word[i] != pref[i]) {
                 result = false;
                 break;
             }
