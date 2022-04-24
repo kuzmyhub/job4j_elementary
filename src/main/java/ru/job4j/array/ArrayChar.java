@@ -8,7 +8,7 @@ public class ArrayChar {
         for (int i = 0; i < arrayLength; i++) {
             String wordString = Character.toString(word[i]);
             String prefString = Character.toString(pref[i]);
-            if (wordString.startsWith(prefString) == false) {
+            if (!wordString.startsWith(prefString)) {
                 result = false;
                 break;
             }
