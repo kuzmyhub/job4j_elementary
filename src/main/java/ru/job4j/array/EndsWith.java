@@ -5,9 +5,7 @@ public class EndsWith {
         boolean result = true;
         int arrayLength = Math.min(word.length, post.length);
         for (int i = 0; i < arrayLength; i++) {
-            String wordString = Character.toString(word[word.length - i - 1]);
-            String postString = Character.toString(post[post.length - i - 1]);
-            if (!wordString.endsWith(postString)) {
+            if (word[word.length - i - 1] != post[post.length - i - 1]) {
                 result = false;
                 break;
             }
