@@ -75,7 +75,7 @@ public class MatrixTest {
         char[][] input = {
                 {' ', 'X', ' '},
                 {' ', 'X', ' '},
-                {' ', 'X', ' '}
+                {' ', ' ', ' '}
         };
         int colum = 2;
         boolean result = MatrixCheck.monoVertical(input, colum);
