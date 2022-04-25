@@ -57,4 +57,28 @@ public class MatrixTest {
                 {6, 12, 18, 24, 30, 36}};
         Assert.assertArrayEquals(expected, result);
     }
+
+    @Test
+    public void whenHasMonoVertical() {
+        char[][] input = {
+                {' ', ' ', 'X'},
+                {' ', ' ', 'X'},
+                {' ', ' ', 'X'},
+        };
+        int column = 2;
+        boolean result = MatrixCheck.monoVertical(input, column);
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void whenHasNotMonoVertical() {
+        char[][] input = {
+                {' ', 'X', ' '},
+                {' ', 'X', ' '},
+                {' ', 'X', ' '}
+        };
+        int colum = 2;
+        boolean result = MatrixCheck.monoVertical(input, colum);
+        Assert.assertFalse(result);
+    }
 }
