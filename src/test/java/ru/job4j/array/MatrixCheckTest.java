@@ -21,8 +21,8 @@ public class MatrixCheckTest {
     @Test
     public void whenHasNotMonoHorizontal() {
         char[][] input = {
-                {'X', 'X', ' '},
                 {' ', ' ', ' '},
+                {'X', 'X', ' '},
                 {' ', ' ', ' '}
         };
         int row = 1;
