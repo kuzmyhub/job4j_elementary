@@ -77,7 +77,7 @@ public class MatrixTest {
                 {' ', 'X', ' '},
                 {' ', ' ', ' '}
         };
-        int colum = 2;
+        int colum = 1;
         boolean result = MatrixCheck.monoVertical(input, colum);
         Assert.assertFalse(result);
     }
