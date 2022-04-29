@@ -5,15 +5,12 @@ public class ArrayDefinition {
         short[] ages = new short[10];
         System.out.println("Array size: " + ages.length
                 + System.lineSeparator());
-
         String[] surnames = new String[100500];
         System.out.println("Array size: " + surnames.length
                 + System.lineSeparator());
-
         float[] prises = new float[40];
         System.out.println("Array size: " + prises.length
                 + System.lineSeparator());
-
         String[] names = new String[4];
         names[0] = "Petr Arsentev";
         names[1] = "Sergey Kuznetsov";
