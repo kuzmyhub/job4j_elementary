@@ -11,22 +11,20 @@ public class Matches {
         while (count > 0) {
             String player = turn ? "Первый игрок" : "Второй игрок";
             System.out.println(player + " введите число от 1 до 3:");
-            boolean limit = true;
-            while (limit) {
-                int matches = Integer.parseInt(input.nextLine());
-                if (matches < 1) {
-                    System.out.println("Вы взяли спичек меньше дозволенного. "
-                            + "Введите число от 1 до 3:");
-                } else if (matches > 3) {
-                    System.out.println("Вы взяли спичек больше дозволенного. "
-                            + "Введите число от 1 до 3:");
-                } else if (count - matches < 0) {
-                    System.out.println("Сейчас вы не можете взять больше "
-                            + count + " спичек");
-                } else {
-                    limit = false;
-                    count = count - matches;
-                }
+            int matches = Integer.parseInt(input.nextLine());
+            if (matches < 1) {
+                System.out.println("Вы взяли спичек меньше дозволенного.");
+                continue;
+            } else if (matches > 3) {
+                System.out.println("Вы взяли спичек больше дозволенного.");
+                continue;
+            } else if (count - matches < 0) {
+                System.out.println("Сейчас вы не можете взять больше "
+                        + count + " спичек");
+                continue;
+            } else {
+                count -= matches;
+                System.out.println("Осталось " + count);
             }
             turn = !turn;
         }
