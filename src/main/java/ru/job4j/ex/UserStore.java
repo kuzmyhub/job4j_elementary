@@ -8,6 +8,7 @@ public class UserStore {
             if (u.getUsername().equals(login)) {
                 System.out.println("User found");
                 rsl = u;
+                break;
             }
         }
         if (rsl == null) {
@@ -19,13 +20,12 @@ public class UserStore {
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (user.getUsername().length() > 2 && user.isValid()) {
-            System.out.println("User is valid");
-        } else {
+        if (user.getUsername().length() < 3 || !user.isValid()) {
             throw new UserInvalidException(
                     "User is invalid"
             );
         }
+        System.out.println("User is valid");
         return true;
     }
 
