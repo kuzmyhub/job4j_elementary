@@ -15,10 +15,17 @@ public class Matrix {
     }
 
     public static void main(String[] args) {
-        try (FileOutputStream out = new FileOutputStream(
-                "result.txt"
-        )) {
-        out.write(Arrays.deepToString(multiple(5)).getBytes());
+        try (FileOutputStream out = new FileOutputStream("result.txt")) {
+            int[][] array = multiple(3);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < array.length; i++) {
+                for (int j = 0; j < array[i].length; j++) {
+                    sb.append(array[i][j]);
+                    sb.append(" ");
+                }
+                sb.append(System.lineSeparator());
+            }
+            out.write(sb.toString().getBytes());
         } catch (Exception e) {
             e.printStackTrace();
         }
